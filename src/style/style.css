@@ -1,4 +1,103 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 body {
     background-image: url(../img/main.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+}
+.content-wrap{
+    margin: 0 auto ;
+    padding: 50px;
+    max-width: 100%;
+    backdrop-filter: blur(5px);
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "data data"
+    "footer footer"
+}
+.content__header{
+    margin: 0 auto;
+    width: 1220px;
+    padding: 0 10px;
+    grid-area: header;
+    display: flex;
+}
+.content__header > p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+.content__header > p > span {
+    color: white;
+    
+}
+.content__header > div {
+    margin-left: auto;
+    width: 305px;
+    padding: 12px 5px 12px 16px;
+    border-radius: 8px;
+    background-color:  rgba(245, 244, 244, 0.4); 
+}
+.content__header > div > input {
+    width: 200px;
+    height:  24px;
+    background-color:  rgba(245, 244, 244, 0.4);    
+    border: none;  
+    border-radius: 3px;  
+}
+.content__header > div > input::placeholder {
+    font-family: 'Raleway';
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(112, 112, 112, 1);
+}
+.content__header > div > button {
+    border: none;
+    background-color: rgba(28,28,28,0);
+    cursor: pointer ;
+}
+.content__data {
+    margin: 0 auto;
+    padding-top: 20px;
+    grid-area: data;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    gap:100px;
+}
+#map {
+    width: 600px;
+    height: 400px;
+    border: 1px solid red;
+    border-radius: 100px;
+}
+.content-container__list{
+    margin: 0 auto;
+}
+.content__list{
+    margin: 0 auto;
+    grid-area: footer;
+    padding-top: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+.content__list > li {
+    list-style-type: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.content__list > li:hover{
+    color: #3ba89f; /* Меняем цвет текста */
+    -webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+      text-shadow: 2px 2px 2px #000;
 }

@@ -7,7 +7,8 @@ export  async function getWeatherAndIcon(city){
         const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${API_KEY}`
         const response = await fetch(url);
         const data = await response.json();
-        return [Math.round(data.main.temp), data.weather[0].icon];
+        console.log(data.coord)
+        return [Math.round(data.main.temp), data.weather[0].icon,data.coord];
     } catch(err){
         alert(`Некорректно введен город: ${city}`);
     }
