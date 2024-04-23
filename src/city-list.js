@@ -9,9 +9,7 @@ export function drawCityList(el, items){
         }
     }
     el.innerHTML = items.map((el) => `<li>${el}</li>`).join("");
-    console.log(el.children.children)
     for (let i = 0; i < el.children.length; i++) {
-        console.log(el.children[i].textContent);
         el.children[i].addEventListener("click", (e) => {
           e.preventDefault();
           drawTitleContent(el.children[i].textContent);
