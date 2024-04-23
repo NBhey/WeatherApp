@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=fbf16afb-9832-4aeb-974c-6cb032ebaab5&lang=ru_RU" type="text/javascript"></script>
+    <title>WeatherApp</title>
+    <link rel="shortcut icon" type="image/jpg" href="images\weather.a732ffae05a49ade9f01.png"/>
+<script defer src="main..bundle.js"></script></head>
+<body>
+    <main class="content content-wrap">
+        <div class="content__header">
+            <p>
+                <span>Weather</span>App
+            </p>
+            <div>
+                <input class="input" type="text" placeholder="Введите город">
+                <button class="btn"><svg width="24" height="20" viewBox="0 -1 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#545454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.9999 21L16.6499 16.65" stroke="#545454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <section class="content__data">
+            <div class="content__data-city">
+                <h2 class="city"></h2>
+                <p class="temperature"></p>
+                <img src="#" alt="weather-icon">
+            </div>
+        
+            <div class="content__map" >
+                <div id="map">
+
+                </div>
+            </div>
+        </section>
+           
+        <div class="content-container__list">
+            <ul class="content__list">
+
+            </ul>
+        </div>
+    </main>
+
+
+<script src="images\index.a87e55caad95cac5e6cb.js"></script>    
+</body>
+</html>
