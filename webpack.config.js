@@ -2,10 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.js', // точка входа сборщика webpack
   output: {
-    path: path.resolve(__dirname, 'prod'),
+    path: path.resolve(__dirname, 'dev'),
     filename: '[name]..bundle.js',
     assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
   },
@@ -26,6 +25,7 @@ module.exports = {
     ],
   },
   plugins: [
+    // HtmlWebpackPlugin создает index.html в директории с бандлом и автоматически добавляет в него ссылку на бандл.
     new HtmlWebpackPlugin({
       template: 'index.html', // откуда брать шаблон
     }),
