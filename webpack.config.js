@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js', // точка входа сборщика webpack
+  entry: './main.js', // точка входа сборщика webpack
   output: {
-    path: path.resolve(__dirname, 'dev'),
-    filename: '[name]..bundle.js',
-    assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
+    clean: true,
+    path: path.resolve(__dirname, 'prod'),
+    filename: 'index.[contenthash].js',
+    assetModuleFilename: 'assets/[name].[contenthash][ext]'
   },
   module: {
     rules: [
