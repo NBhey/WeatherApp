@@ -4,7 +4,7 @@ import { initMap } from "./map.js";
 
 export function drawCityList(el, items){
     for (let i = 0; i < items.length; i++){
-        if (items.length === 10){
+        if (items.length === 11){
             items.splice(0,1)
         }
     }

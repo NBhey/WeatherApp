@@ -19,11 +19,26 @@
             }
         }
     ],
+    "languageOptions": {
+        "globals":"...globals.browser"
+        
+    },
     "plugins":["jest"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "rules": {
-    }
+    },
+    "max-len": [
+        "error",
+        {
+          "code": 120,
+          "comments": 65,
+          "tabWidth": 2,
+          "ignoreUrls": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreRegExpLiterals": true
+        }
+      ]
 }
