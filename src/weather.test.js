@@ -55,7 +55,7 @@ describe("Get city's weather and icon", ()=>{
     it('get weather and icon', async  () => {
        const temp = await getWeatherAndIcon('Rostov-on-Don')
        let arr = [];
-       arr.push(Math.round(data.main.temp), data.weather[0].icon)
+       arr.push(Math.round(data.main.temp), data.weather[0].icon, data.coord)
        expect(temp).toEqual(arr);
     });
    

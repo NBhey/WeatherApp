@@ -82,6 +82,7 @@ body {
 }
 .content__data-city{
     align-self: center;
+    text-transform: capitalize;
     width: 350px;
 }
 #map {
@@ -96,13 +97,11 @@ body {
 }
 .content-container__list{
     margin: 0 auto;
-}
-.content-container__list{
     grid-area: footer;
 }
 .content__list{
     margin: 0 auto;
-    
+    text-transform: capitalize;
     padding-top: 50px;
     display: flex;
     gap: 30px;

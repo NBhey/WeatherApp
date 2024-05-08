@@ -5,6 +5,7 @@ let Map;
 
 export async function initMap(city) {
     let coord = await getWeatherAndIcon(city)
+    if (coord === undefined){return}  
     await ymaps3.ready;
 
     const { YMap, YMapDefaultSchemeLayer } = ymaps3;

@@ -21,12 +21,13 @@ initMap(myCity);
 export async function drawTitleContent(currentCity){
     try{
         currentCity = (typeof(currentCity) == 'object') ? currentCity.city : currentCity;
-        city.textContent = currentCity;
         const tempAndIcon = await getWeatherAndIcon(currentCity);
+        if (tempAndIcon == undefined){return "error"}
+        city.textContent = currentCity;
         temp.textContent = `${tempAndIcon[0]}°C `;
         img.src = `http://openweathermap.org/img/wn/${tempAndIcon[1]}@2x.png`; 
     }catch(e){
-        return
+        return null
     }
 }
   
@@ -42,17 +43,19 @@ const btn = document.querySelector('.btn');
  
 btn.addEventListener('click', async () => {
     let value = input.value.trim();
-    if (value === "") {
-        alert("Проверьте, что Вы ввели город")
-    } else {
+    if (value === "") {alert("Проверьте, что Вы ввели город") } 
+    else if (await drawTitleContent(value) === 'error'){ 
+        input.value = "";
+        return alert('Проверьте, что Вы корректно ли  указали город')
+    }
+    else{
         drawTitleContent(value);
         input.value = "";
         getCity.push(value);
         drawCityList(listCity, getCity);
         saveList(getCity);
         initMap(value);
-    }  
-    
+    }
 })
 
 

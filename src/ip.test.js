@@ -16,7 +16,6 @@ const data = {
   "continent_code": "EU",
   "country": "Russia",
   "region": "Rostov Oblast",
-  // "name":"James" for test
 }
 
 describe('get Ip', ()=>{
