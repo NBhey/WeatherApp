@@ -42,13 +42,14 @@ drawCityList(listCity, getCity);
 const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", async () => {
+btn.addEventListener("click", async (e) => {
+  e.preventDefault();
   let value = input.value.trim().toLowerCase();
   if (value === "") {
     alert("Проверьте, что Вы ввели город");
   } else if ((await drawTitleContent(value)) === "error") {
     input.value = "";
-    return alert("Проверьте, что Вы корректно ли  указали город");
+    return alert(`Проверьте, что Вы корректно ли  указали город: ${value}`);
   } else if (getCity.includes(value) == true) {
     drawTitleContent(value);
     initMap(value);
