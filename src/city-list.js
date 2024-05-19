@@ -13,7 +13,6 @@ export function drawCityList(el, items) {
     el.children[i].addEventListener("click", (e) => {
       e.preventDefault();
       drawTitleContent(el.children[i].textContent);
-      console.log(drawTitleContent(el.children[i].textContent));
       initMap(el.children[i].textContent);
     });
   }

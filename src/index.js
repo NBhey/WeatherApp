@@ -5,8 +5,6 @@ import { saveList, readList } from "./localStorage.js";
 import { initMap } from "./map.js";
 import "./style/style.css";
 
-console.log("Я подключен");
-
 // Ищем элементы по странице
 const city = document.querySelector(".city");
 const temp = document.querySelector(".temperature");
@@ -55,7 +53,6 @@ btn.addEventListener("click", async (e) => {
     initMap(value);
     input.value = "";
   } else {
-    console.log(getCity.includes(value) == true);
     drawTitleContent(value);
     input.value = "";
     getCity.push(value);
