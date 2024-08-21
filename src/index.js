@@ -23,7 +23,7 @@ export async function drawTitleContent(currentCity) {
     if (tempAndIcon == undefined) {
       return "error";
     }
-    city.textContent = currentCity;
+    city.innerHTML = currentCity;
     temp.textContent = `${tempAndIcon[0]}°C `;
     img.src = `http://openweathermap.org/img/wn/${tempAndIcon[1]}@2x.png`;
   } catch (e) {
