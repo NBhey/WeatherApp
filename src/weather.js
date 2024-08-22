@@ -1,4 +1,4 @@
-const API_KEY = "fd185eec875c277bc16bccdb3629b6af";
+const API_KEY = "484a6ef87b65accb9fe4d2a88685c6ff";
 
 export async function getWeatherAndIcon(city) {
   city = typeof city == "object" ? city.city : city;
